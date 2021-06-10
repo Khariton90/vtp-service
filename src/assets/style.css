@@ -1,0 +1,119 @@
+body,html{
+    height: 100%;
+    min-width: 370px;
+}
+img{
+    width: 100%;
+    height: auto;
+  }
+  a{
+    text-decoration: none!important;
+  }
+p{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+h2{
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 37px;
+color: #222222;
+}
+.form-title{
+  background: #80BD00;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.08), inset -2px -2px 4px #699B00, inset 4px 4px 9px #ADFF00;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 8px 18px;
+}
+.form-body{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 11px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+form input{
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 1px;
+}
+.btn-vtp{
+  background: #80BD00;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.08), inset -2px -2px 4px #699B00, inset 4px 4px 9px #ADFF00;
+  border-radius: 2px;
+  border: none;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+}
+
+ul{
+  list-style: none;
+  padding: 0!important;
+}
+li{
+  margin: 0;
+  padding: 0;
+}
+
+.text-title{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #222222;
+}
+
+.text-descript{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #222222;
+}
+.table{
+  text-align: center;
+  font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+}
+.table-bold{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 34px 0 18px 0!important;
+}
+th{
+  font-weight: normal;
+}
+@media(max-width:1200px){
+  .canbottom,
+  .abouttop,
+  .pricebottom,
+  .organizedtop {
+    width: 190px!important;
+    max-height: 160px!important;
+    height: auto!important;
+}
+}
+@media(max-width:762px){
+  section{
+    padding-left: 10px!important;
+    padding-right: 0px!important;
+  }
+  .service-form,.title {
+    transform: translate(0, 0px)!important;
+}
+.canbottom,
+.abouttop,
+  .pricebottom,
+.organizedtop  {
+  width: 100px!important;
+  max-height: 80px!important;
+  height: auto!important;
+}
+}
