@@ -21,7 +21,7 @@
   </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-nav d-flex justify-content-between">
 
-  <div class="container-fluid">
+  <div class="container-fluid wrapp">
 
     <div class="col">
           <a class="navbar-brand d-flex" href="#">
@@ -115,6 +115,10 @@ mounted(){
 </script>
 
 <style>
+.wrapp{
+  max-width: 2500px!important;
+  margin: 0 auto;
+}
 .mobile{
     width: 100%;
     height: calc(100vh + 75px);
@@ -247,6 +251,15 @@ transition: all 0.3s ease;
 @media (max-width: 1200px){
 .header-tel a span:last-child{
   display: none;
+}
+}
+@media (min-width: 1930px){
+.navbar-brand__title span:first-child {
+    font-size: 24px;
+ }
+.nav-describ {
+    font-size: 12px;
+    line-height: 2;
 }
 }
 @media (max-width:1120px){

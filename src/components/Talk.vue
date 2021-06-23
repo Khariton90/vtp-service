@@ -10,80 +10,56 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="swiper-item">
-            <p>Алексей <a href="">(ссылка на отзыв)</a></p>
+            <p>Алексей</p>
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт.</p>
-            <p>Даже не верится, что это дело человеческих рук?. </p>
-            <p>Спасибо мастерам и всему персоналу компании за столь качественный, </p>
-            <p>красивый, интересный ремонт. </p>
-            <p>Я очень и очень доволен.</p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
             </div>
         </div>
         <div class="swiper-slide">
                         <div class="swiper-item">
-            <p>Алексей <a href="">(ссылка на отзыв)</a></p>
+            <p>Алексей</p>
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт.</p>
-            <p>Даже не верится, что это дело человеческих рук?. </p>
-            <p>Спасибо мастерам и всему персоналу компании за столь качественный, </p>
-            <p>красивый, интересный ремонт. </p>
-            <p>Я очень и очень доволен.</p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
             </div>
         </div>
         <div class="swiper-slide">
                         <div class="swiper-item">
-            <p>Алексей <a href="">(ссылка на отзыв)</a></p>
+            <p>Алексей</p>
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт.</p>
-            <p>Даже не верится, что это дело человеческих рук?. </p>
-            <p>Спасибо мастерам и всему персоналу компании за столь качественный, </p>
-            <p>красивый, интересный ремонт. </p>
-            <p>Я очень и очень доволен.</p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
             </div>
         </div>
         <div class="swiper-slide">
                         <div class="swiper-item">
-            <p>Алексей <a href="">(ссылка на отзыв)</a></p>
+            <p>Алексей</p>
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт.</p>
-            <p>Даже не верится, что это дело человеческих рук?. </p>
-            <p>Спасибо мастерам и всему персоналу компании за столь качественный, </p>
-            <p>красивый, интересный ремонт. </p>
-            <p>Я очень и очень доволен.</p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
             </div>
         </div>
         <div class="swiper-slide">
                         <div class="swiper-item">
-            <p>Алексей <a href="">(ссылка на отзыв)</a></p>
+            <p>Алексей</p>
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт.</p>
-            <p>Даже не верится, что это дело человеческих рук?. </p>
-            <p>Спасибо мастерам и всему персоналу компании за столь качественный, </p>
-            <p>красивый, интересный ремонт. </p>
-            <p>Я очень и очень доволен.</p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
             </div>
         </div>
         <div class="swiper-slide">
                         <div class="swiper-item">
-            <p>Алексей <a href="">(ссылка на отзыв)</a></p>
+            <p>Алексей</p>
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт.</p>
-            <p>Даже не верится, что это дело человеческих рук?. </p>
-            <p>Спасибо мастерам и всему персоналу компании за столь качественный, </p>
-            <p>красивый, интересный ремонт. </p>
-            <p>Я очень и очень доволен.</p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
             </div>
         </div>
       </div>
@@ -104,38 +80,18 @@ return{
 },
 mounted(){
   window.addEventListener('load', function(){
-    var swiper
-    if(window.innerWidth > 600){
-      swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".mySwiper", {
                 slidesPerView:1.5,
         centeredSlides: true,
-        spaceBetween: 78,
+        spaceBetween: 20,
         initialSlide: 1,
-        slidePerGroup:1,
+        slidePerGroup:'auto',
         loop:true,
                 navigation: {
           nextEl: ".swiper-button-next-talk",
           prevEl: ".swiper-button-prev-talk",
         }
       })
-    }else{
-      swiper = new Swiper(".mySwiper", {
-slidesPerView:1,
-        centeredSlides: true,
-        spaceBetween:5,
-        initialSlide: 1,
-        slidePerGroup:1,
-        loop:true,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next-talk",
-          prevEl: ".swiper-button-prev-talk",
-        }
-      })
-    } 
 })
 }
 }
@@ -143,7 +99,8 @@ slidesPerView:1,
 
 <style scoped>
 #talk{
-    padding: 48px 0 152px 0;
+    padding-top:calc(42px + 50 * ((100vw - 375px) / (1440 - 375)));
+    padding-bottom:calc(132px + 78 * ((100vw - 375px) / (1440 - 375)));
     position: relative;
 }
 .talk-title{
@@ -152,19 +109,19 @@ slidesPerView:1,
 .talk-title h2{
   padding: 0;
   border-bottom: 1px solid #80BD00;
-  margin-bottom: 94px;
+  margin-bottom:calc(45px + 40 * ((100vw - 375px) / (1440 - 375)));
 }
 .swiper-container {
         width: 100%;
         height: 100%;
         max-width: 750px;
-      }
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .swiper-item{
 width: 463px;
 height: 180px;
@@ -176,8 +133,11 @@ color: #222222;
 font-style: italic;
 font-weight: normal;
 font-size: 12px;
-line-height: 14px;
+line-height: 1.7;
 padding: 18px 28px;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 .swiper-item p:first-child{
   font-weight: normal;
@@ -222,11 +182,17 @@ padding-bottom: 1px!important;
 }
 .talk1{
   left: 0;
-  bottom: 72px;
+  bottom: 62px;
 }
 .talk2{
   right: 0;
   top: 72px;
+}
+.swiper-button-next, .swiper-button-prev {
+    top:calc(50% + 10 * ((100vw - 375px) / (1440 - 375)));
+}
+.swiper-slide{
+  width: auto;
 }
 @media (max-width:1300px){
   .talk{

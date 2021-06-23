@@ -45,18 +45,7 @@
 
 
 export default{
-methods:{
-    scroll(){
-        let distance = window.scrollY;
-        let block = document.getElementById('about');
-        if(block.offsetTop - distance < 300 && !this.$refs.bg.classList.contains('active')){
-            this.$refs.bg.classList.add('active');
-        }
-    }
-},
-mounted(){
-    document.addEventListener('scroll', this.scroll);
-}
+
 }
 </script>
 
@@ -82,13 +71,9 @@ overflow: hidden;
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 0;
+    max-width: 45%;
     max-height: 559px;
     transition: all 1s ease;
-}
-.about-bg.active{
-    transition: all 1s linear 0s;
-    max-width: 45%;
 }
 .aboutframe{
     position: absolute;

@@ -1,6 +1,6 @@
 <template>
     <section class="section" id="price">
-      <img class="pricebottom" src="../assets/img/par2bg.png" alt="" :style="style">
+
         <div class="container">
         <div class="row price-title">
           <h2>Стоимость работ</h2>
@@ -572,6 +572,36 @@
       <td>шт.</td>
       <td>220,00 ₽</td>
     </tr>
+        <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+        <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+        <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+        <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+        <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+        <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
   </thead>
 </table>
           </div>
@@ -595,26 +625,8 @@ export default{
       table: false,
       top: 10
     }
-  },
-methods:{
-toggleTable(){
-  this.table ? this.table = false : this.table = true;
-},
-  scroll(){
-    let distance = window.scrollY;
-    this.top = (distance / 8)
-}
-},
-computed:{
-style(){
-    return {
-        top: this.top + 'px'
-    }
-}
-},
-mounted(){
-  window.addEventListener('scroll', this.scroll)
-}
+  }
+
 }
 </script>
 
@@ -633,13 +645,7 @@ mounted(){
     padding: 48px 0 34px 0;
     position: relative;
 }
-.pricebottom{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 269px;
-  z-index: 1;
-}
+
 .price-list li{
         margin-bottom: 20px;
 }
@@ -674,7 +680,37 @@ mounted(){
 .accordion-button{
   margin-bottom: 20px;
 }
+::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:5px;
+height:0px
+}
 
+::-webkit-scrollbar-track {
+background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color:#80BD00;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color:#80BD00;
+}
+
+::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 4px;
+}
 .accordion-button:not(.collapsed) {
     color: #FFFFFF;
     background-color: #80BD00;
@@ -690,11 +726,11 @@ mounted(){
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
 }
-@media (max-width:1200px){
-.pricebottom{
-  display: none;
+.accordion-body{
+  max-height: 600px;
+  overflow-y: auto;
 }
-}
+
 @media (max-width:992px){
 .accordeon-img{
   display: none;

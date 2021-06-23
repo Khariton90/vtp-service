@@ -1,5 +1,6 @@
 <template>
     <section id="organized">
+      <img class="organized-bg" src="../assets/img/par2bg.png" alt="">
         <div class="container">
             <div class="row organized-title">
                 <h2>Как все устроено?</h2>
@@ -36,7 +37,29 @@
 <script>
 
 export default{
+  data(){
+    return{
+      table: false,
+      bottom: 10
+    }
+  },
+methods:{
 
+  scroll(){
+    let distance = window.scrollY;
+    this.bottom = (distance / 12)
+}
+},
+computed:{
+style(){
+    return {
+        bottom: this.bottom + 'px'
+    }
+}
+},
+mounted(){
+  window.addEventListener('scroll', this.scroll)
+}
 }
 </script>
 
@@ -45,6 +68,13 @@ export default{
     background: #E1DBDB;
     padding:48px 0 56px 0;
     position: relative;
+}
+.organized-bg{
+  position: absolute;
+  right: 0;
+  bottom: 199px;
+  width: 269px;
+  z-index: 1;
 }
 .organizedtop{
     position: absolute;
@@ -85,6 +115,11 @@ export default{
     .text-descript br{
         display: none;
     }
+@media (max-width:1200px){
+.organized-bg{
+  display: none;
+}
+}
 @media (max-width:992px){
     .text-descript br{
         display: block;
