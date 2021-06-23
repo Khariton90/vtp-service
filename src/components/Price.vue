@@ -1,19 +1,20 @@
 <template>
-    <section id="price">
-      <img class="pricebottom" src="../assets/img/pricebottom.png" alt="">
+    <section class="section" id="price">
+      <img class="pricebottom" src="../assets/img/par2bg.png" alt="" :style="style">
         <div class="container">
-            <div class="row price-title">
-                <h2>Стоимость работ</h2>
-            </div>
+        <div class="row price-title">
+          <h2>Стоимость работ</h2>
+          </div>
+          <div class="accordion " id="accordionExample">
+    <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        Плотницкие работы
+      </button>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
         <div class="row">
-            <div class="col-12 col-lg-8">
-
-                            <ul class="price-list" @click.prevent="toggleTable">
-                <li> <a href="">Плотницкие работы</a>
-                </li>
-                <li> <a href="">Электротехнические работы</a>
-<transition name="fade">
-<table  v-if="table" class="table table-bordered priceToggle">
+          <div class="col-12 col-lg-8 p-0">
+             <table class="table table-bordered priceToggle">
   <thead>
     <tr class="table-active">
       <th>Услуга</th>
@@ -79,17 +80,509 @@
     </tr>
   </thead>
 </table>
-</transition>
-                </li>
-                <li> <a href="">Сантехнические работы</a> </li>
-                <li> <a href="">Работы по ремонту окон</a> </li>
-                <li> <a href="">Ремонтно-отделочные работы</a> </li>
-                <li> <a href="">Обслуживание кондиционеров</a> </li>
-                <li> <a href="">Расценки на особые условия</a> </li>
-            </ul>
-            </div>
-            <div class="col"><img src="../assets/img/price-image.png" alt=""></div>
+          </div>
+          <div class="col accordeon-img">
+            <img src="../assets/img/price-image.png" alt="">
+          </div>
         </div>
+               
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Электротехнические работы
+      </button>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div class="row">
+        <div class="col-12 col-lg-8 p-0">
+  <table class="table table-bordered priceToggle">
+  <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Демонтаж эл. точки<br> (розетка, выключатель,<br> монтажная коробка)</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж открытой проводки</td>
+      <td>м.п.</td>
+      <td>22,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж проводки,<br> размещенной в коробах</td>
+      <td>м.п.</td>
+      <td>27,50 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж светильников</td>
+      <td>шт.</td>
+      <td>77,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж двухполюсного<br> автомата</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+        <tr>
+      <td colspan="3" class="table-bold">Устройство гнезда для подразетника (стандартного размера)</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+    <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в кирпичной стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсолите</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсокартоне</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+  </thead>
+</table>
+        </div>
+        <div class="col accordeon-img">
+
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Сантехнические работы
+      </button>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-12 col-lg-8 p-0">
+             <table class="table table-bordered priceToggle">
+  <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Демонтаж эл. точки<br> (розетка, выключатель,<br> монтажная коробка)</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж открытой проводки</td>
+      <td>м.п.</td>
+      <td>22,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж проводки,<br> размещенной в коробах</td>
+      <td>м.п.</td>
+      <td>27,50 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж светильников</td>
+      <td>шт.</td>
+      <td>77,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж двухполюсного<br> автомата</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+        <tr>
+      <td colspan="3" class="table-bold">Устройство гнезда для подразетника (стандартного размера)</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+    <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в кирпичной стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсолите</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсокартоне</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+  </thead>
+</table>
+          </div>
+          <div class="col-6 accordeon-img"></div>
+        </div>
+               
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Работы по ремонту окон
+      </button>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-12 col-lg-8 p-0">
+             <table class="table table-bordered priceToggle">
+  <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Демонтаж эл. точки<br> (розетка, выключатель,<br> монтажная коробка)</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж открытой проводки</td>
+      <td>м.п.</td>
+      <td>22,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж проводки,<br> размещенной в коробах</td>
+      <td>м.п.</td>
+      <td>27,50 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж светильников</td>
+      <td>шт.</td>
+      <td>77,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж двухполюсного<br> автомата</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+        <tr>
+      <td colspan="3" class="table-bold">Устройство гнезда для подразетника (стандартного размера)</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+    <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в кирпичной стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсолите</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсокартоне</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+  </thead>
+</table>
+          </div>
+          <div class="col-6 accordeon-img"></div>
+        </div>
+               
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Ремонтно-отделочные работы
+      </button>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+             <table class="table table-bordered priceToggle">
+  <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Демонтаж эл. точки<br> (розетка, выключатель,<br> монтажная коробка)</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж открытой проводки</td>
+      <td>м.п.</td>
+      <td>22,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж проводки,<br> размещенной в коробах</td>
+      <td>м.п.</td>
+      <td>27,50 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж светильников</td>
+      <td>шт.</td>
+      <td>77,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж двухполюсного<br> автомата</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+        <tr>
+      <td colspan="3" class="table-bold">Устройство гнезда для подразетника (стандартного размера)</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+    <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в кирпичной стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсолите</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсокартоне</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+  </thead>
+</table>
+          </div>
+          <div class="col-6 accordeon-img"></div>
+        </div>
+               
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Обслуживание кондиционеров
+      </button>
+    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-12 col-lg-8 p-0">
+             <table class="table table-bordered priceToggle">
+  <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Демонтаж эл. точки<br> (розетка, выключатель,<br> монтажная коробка)</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж открытой проводки</td>
+      <td>м.п.</td>
+      <td>22,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж проводки,<br> размещенной в коробах</td>
+      <td>м.п.</td>
+      <td>27,50 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж светильников</td>
+      <td>шт.</td>
+      <td>77,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж двухполюсного<br> автомата</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+        <tr>
+      <td colspan="3" class="table-bold">Устройство гнезда для подразетника (стандартного размера)</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+    <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в кирпичной стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсолите</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсокартоне</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+  </thead>
+</table>
+          </div>
+          <div class="col-6 accordeon-img"></div>
+        </div>
+               
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        Расценки на особые условия
+      </button>
+    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col-12 col-lg-8 p-0">
+             <table class="table table-bordered priceToggle">
+  <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Демонтаж эл. точки<br> (розетка, выключатель,<br> монтажная коробка)</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж открытой проводки</td>
+      <td>м.п.</td>
+      <td>22,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж проводки,<br> размещенной в коробах</td>
+      <td>м.п.</td>
+      <td>27,50 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж светильников</td>
+      <td>шт.</td>
+      <td>77,00 ₽</td>
+    </tr>
+    <tr>
+      <td>Демонтаж двухполюсного<br> автомата</td>
+      <td>шт.</td>
+      <td>385,00 ₽</td>
+    </tr>
+        <tr>
+      <td colspan="3" class="table-bold">Устройство гнезда для подразетника (стандартного размера)</td>
+    </tr>
+  </tbody>
+    <thead>
+    <tr class="table-active">
+      <th>Услуга</th>
+      <th>ед.изм</th>
+      <th>Цена, ₽</th>
+    </tr>
+    <tr>
+      <td>в ж/б стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в кирпичной стене</td>
+      <td>шт.</td>
+      <td>275,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсолите</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+    <tr>
+      <td>в гипсокартоне</td>
+      <td>шт.</td>
+      <td>220,00 ₽</td>
+    </tr>
+  </thead>
+</table>
+          </div>
+          <div class="col-6 accordeon-img"></div>
+        </div>
+               
+      </div>
+    </div>
+  </div>
+
+</div>
         </div>
     </section>
 </template>
@@ -99,13 +592,28 @@
 export default{
   data(){
     return{
-      table: false
+      table: false,
+      top: 10
     }
   },
 methods:{
 toggleTable(){
   this.table ? this.table = false : this.table = true;
+},
+  scroll(){
+    let distance = window.scrollY;
+    this.top = (distance / 8)
 }
+},
+computed:{
+style(){
+    return {
+        top: this.top + 'px'
+    }
+}
+},
+mounted(){
+  window.addEventListener('scroll', this.scroll)
 }
 }
 </script>
@@ -130,7 +638,7 @@ toggleTable(){
   right: 0;
   bottom: 0;
   width: 269px;
-  height: 224px;
+  z-index: 1;
 }
 .price-list li{
         margin-bottom: 20px;
@@ -147,13 +655,58 @@ toggleTable(){
   padding: 0;
   border-bottom: 1px solid #80BD00;
 }
-.price-list a{
+.price-list a,.accordion-button{
     padding: 6px 42px 7px;
     background: #80BD00;
     border-radius: 5px;
     color: #FFFFFF;
     display: inline-block;
     margin-bottom: 12px;
+    width: auto;
+}
+.accordion-item{
+  border: none;
+  background-color: none;
+}
+.collapsed{
+  margin: 0;
+}
+.accordion-button{
+  margin-bottom: 20px;
 }
 
+.accordion-button:not(.collapsed) {
+    color: #FFFFFF;
+    background-color: #80BD00;
+    box-shadow:0;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #80BD00;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+@media (max-width:1200px){
+.pricebottom{
+  display: none;
+}
+}
+@media (max-width:992px){
+.accordeon-img{
+  display: none;
+}
+.price-title h2{
+  margin-left: 15px;
+}
+.accordion-body {
+    padding: 0 15px;
+}
+.price-title{
+    margin-bottom: 34px;
+}
+}
 </style>

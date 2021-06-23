@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import  "bootstrap/dist/css/bootstrap.css"
+import  "bootstrap/dist/js/bootstrap.min.js"
 Vue.config.productionTip = false
 
 var VueScrollTo = require('vue-scrollto');

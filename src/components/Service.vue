@@ -1,5 +1,5 @@
 <template>
-    <section id="service">
+    <section class="section" id="service">
         <div class="container">
             <div class="row service">
                 <div class="col-12 col-lg-8 title">
@@ -11,8 +11,7 @@
                         <p>офисов, кафе, ресторанов, салонов красоты и складов.</p>
                         <p>Доверяйте профессионалам.</p>
                     </div>
-
-                <div class="title__items items">
+                    <div class="title__items items">
                     <div class="items_icons">
                         <div class="icon">
                         <img src="../assets/img/icons/1.svg" alt="">
@@ -51,9 +50,48 @@
                     </div>
                 </div>
                 </div>
-                <div class="col-12 col-lg-4 title-form">
-                        <Form/>
+                    <div class="col-12 col-lg-4 title-form">
+                    <Form/>
                 </div>
+                <div class="col-12 col-lg-8 title__items items items-mobile">
+                    <div class="items_icons">
+                        <div class="icon">
+                        <img src="../assets/img/icons/1.svg" alt="">
+                        </div>
+                        <div class="item__describ">
+                        <p>Первичный выезд нашего</p>
+                        <p>специалиста бесплатно</p>
+                    </div>
+                    </div>
+                    <div class="items_icons">
+                    <div class="icon">
+                    <img src="../assets/img/icons/2.svg" alt="">
+                    </div>
+                    <div class="item__describ">
+                        <p>Качественный ремонт в</p>
+                        <p>кратчайшие сроки</p>
+                    </div>
+                    </div>
+                    <div class="items_icons">
+                    <div class="icon">
+                    <img src="../assets/img/icons/3.svg" alt="">
+                    </div>
+                    <div class="item__describ">
+                        <p>Наличный и безналичный</p>
+                        <p>расчет по договору</p>
+                    </div>
+                    </div>
+                    <div class="items_icons">
+                    <div class="icon">
+                    <img src="../assets/img/icons/4.svg" alt="">
+                    </div>
+                    <div class="item__describ">
+                        <p>Комплексный подход к</p>
+                        <p>ремонту и обслуживанию</p>
+                    </div>                        
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -100,16 +138,18 @@ components:{
 h1{
     font-style: normal;
     font-weight: bold;
-    font-size: calc(22px + 26 * ((100vw - 375px) / (1920 - 375)));
-    line-height: calc(26px + 36 * ((100vw - 375px) / (1920 - 375)));
+    font-size: calc(32px + 16 * ((100vw - 375px) / (1920 - 375)));
+    line-height: calc(28px + 28 * ((100vw - 375px) / (1920 - 375)));
 }
 .items{
     display: flex;
     flex-wrap: wrap;
     margin-top: 52px;
 }
+
 .items_icons{
-    width: 360px;
+    max-width: 360px;
+    min-width: 345px;
     height: 68px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
@@ -136,9 +176,13 @@ h1{
     padding: 13px 9px;
     display: flex;
     align-items: center;
+    box-shadow: 2px 2px 1px rgb(0 0 0 / 8%), inset -2px -2px 4px #699b00, inset 4px 4px 9px #adff00;
 }
 .item__describ{
-    margin-left: 30px;
+        padding: 0px 20px 0px 30px;
+}
+.items-mobile{
+    display: none;
 }
 @media (min-width:2000px) {
     h1{
@@ -148,10 +192,15 @@ h1{
   }
 @media (max-width:1400px) {
   .items_icons{
-      width: 330px!important;
       margin-right: 15px!important;
   }
   }
+
+@media (max-width: 1250px){
+    .service-form{
+    transform: translate(0px, 0px);
+    }
+}
   @media (max-width:1199px){
 #service {
     padding: 100px 0 40px 0;
@@ -161,8 +210,21 @@ h1{
     margin-top: 25px;
 }
 .items_icons{
-    width: 360px!important;
     margin: 10px 0px!important;
+}
+.items{
+    display: none;
+}
+.items{
+    margin-top: 65px;
+}
+.items-mobile{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.title{
+    transform: translate(0px, 0px);
 }
   }
   @media (max-width:1120px) {
@@ -174,12 +236,46 @@ h1{
 #service{
  height: auto!important;
 }
-.items{
-    display: none;
+.items-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.service-form{
+    transform: translate(0px, 0px);
 }
 .title-form {
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 20px;
 }
+.title{
+    margin-bottom: 42px;
+    margin-top: 29px;
+    text-align: center;
+}
+}
+
+@media (max-width: 768px){
+    .items-mobile {
+    flex-direction: column;
+    justify-content: center;
+    padding:0 15px;
+}
+}
+  @media (max-width:500px) {
+    .title{
+    text-align: left;
     }
+  }
+  @media (max-width:374px) {
+    .items_icons{
+    max-width: 320px;
+    min-width: 310px;
+    }
+    .item__describ{
+        padding:0 10px;
+    }
+  }
 </style>

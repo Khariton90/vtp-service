@@ -1,6 +1,5 @@
 <template>
-  <section id="about">
-      <img class="abouttop" src="../assets/img/abouttop.png" alt="">
+  <section class="section" id="about">
       <div class="container">
           <div class="row about-title">
               <div class="col">
@@ -35,7 +34,7 @@
     </div>
 </div>
       </div>
-              <div class="about-bg">
+              <div class="about-bg" ref="bg">
                   <img class="aboutframe" src="../assets/img/aboutframe.png" alt="">
                   <img src="../assets/img/about2.png" alt="">
               </div>
@@ -46,7 +45,18 @@
 
 
 export default{
-
+methods:{
+    scroll(){
+        let distance = window.scrollY;
+        let block = document.getElementById('about');
+        if(block.offsetTop - distance < 300 && !this.$refs.bg.classList.contains('active')){
+            this.$refs.bg.classList.add('active');
+        }
+    }
+},
+mounted(){
+    document.addEventListener('scroll', this.scroll);
+}
 }
 </script>
 
@@ -54,7 +64,7 @@ export default{
 #about{
 background: #E1DBDB;
 position: relative;
-padding: 48px 0 0 0;
+padding: 48px 40px 0 60px;
 overflow: hidden;
 }
 .about-title{
@@ -72,8 +82,13 @@ overflow: hidden;
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 45%;
+    max-width: 0;
     max-height: 559px;
+    transition: all 1s ease;
+}
+.about-bg.active{
+    transition: all 1s linear 0s;
+    max-width: 45%;
 }
 .aboutframe{
     position: absolute;
@@ -120,10 +135,27 @@ transform: translate(-87%, 0);
 }
 @media (max-width: 991px){
     .about-bg{
-        opacity: 0.3;
+        display: none;
     }
 .sofa img{
     transform: translate(-50%, 0);
+}
+}
+@media (max-width:992px){
+    .decrib-first[data-v-c226fde6]:before {
+    left: 0px;
+    top: -18px;
+}
+}
+@media (max-width: 768px){
+.sofa img{
+    display: none;
+}
+#about{
+background: #E1DBDB;
+position: relative;
+padding: 48px 0px 64px 0px;
+overflow: hidden;
 }
 }
 @media (max-width: 620px){

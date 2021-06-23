@@ -1,5 +1,5 @@
 <template>
-    <form action="" class="service-form">
+    <form action="" class="service-form p-0">
     <div class="form-header">
     <p>Оставте заявку</p>
     <p>и наш специалист вам перезонит</p>
@@ -10,8 +10,10 @@
     <input type="text" id="name" autocomplete="off">
     </div>
     <div class="form-input">
-    <label for="tel">Ваш номер телефона</label>
-    <input type="tel" id="tel" autocomplete="off">
+    <label for="tel" >Ваш номер телефона</label>
+    <input type="tel" id="tel" autocomplete="off"
+     v-imask="mask" ref="tel" 
+     @focus="mask.lazy = false"  @blur="mask.lazy = true">
     </div>
     <div class="form-input form-input_select">
     <label for="company">Выберите отдел              </label>
@@ -32,8 +34,23 @@
 </template>
 
 <script>
+import {IMaskDirective} from 'vue-imask';
 export default{
+data(){
+    return{
+        value: 1,
+        mask: {
+          mask: '{+7} (000) 000-00-00',
+          lazy: true
+}
+}
+},
+methods:{
 
+ },
+  directives: {
+    imask: IMaskDirective
+  }
 }
 </script>
 

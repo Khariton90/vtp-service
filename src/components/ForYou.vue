@@ -1,7 +1,7 @@
 <template>
-    <section id="forYou">
-        <img class="service-bg" src="../assets/img/serviceback.png" alt="">
-        <img class="canbottom" src="../assets/img/canbottom.png" alt="">
+    <section class="section" id="forYou">
+        <img class="service-bg" id="serviceBg" src="../assets/img/serviceback.png" alt="">
+        <img class="canbottom" src="../assets/img/parBg.png" alt="table" ref="table">
     <div class="container">
         <div class="row foryou-title">
             <h2>Для вас мы можем</h2>
@@ -12,10 +12,10 @@
             <h3>Всё что вам нужно есть у нас</h3>
             </div>
         </div>
-        <div class="row foryou-blocks">
+        <div class="row foryou-blocks block-fr">
         <div class="col-12 col-md-6 col-xl-4">
 
-            <div class="blocks">
+            <div class="blocks repair">
                 <img src="../assets/img/icons/item1.svg" alt="">
                 <div class="blocks-describ">
                     <p>Ремонт помещений</p>
@@ -28,9 +28,9 @@
             <div class="blocks">
                 <img src="../assets/img/icons/item2.svg" alt="">
                 <div class="blocks-describ">
-                    <p>Ремонт помещений</p>
-                    <p>косметический и капитальный</p>
-                    <p>ремонт ваших помещений</p>
+                    <p>Сантехнические работы</p>
+                    <p>выполнение полного цикла</p>
+                    <p>операций</p>
                 </div>
             </div>
         </div>
@@ -60,14 +60,19 @@
         </div>
         <div class="row service-subtitle">
             <div class="col-4"></div>
-            <div class="col-12 col-xl-8">
+            <div class="col-12 col-xl-8 p-0">
             <h3>Мы выполняем все, даже не большие заявки</h3>
             </div>
         </div>
-        <div class="row foryou-blocks">
+        <div class="row foryou-blocks block-fr">
         <div class="col-12 col-md-6 col-xl-4">
-
-            <div class="blocks">
+                        <div class="blocks master">
+            <img src="../assets/img/icons/item9.svg" alt="">
+            <div class="blocks-describ">
+             <p>Мастер на час</p>
+            </div>
+        </div>
+            <div class="blocks handle">
                 <img src="../assets/img/icons/item5.svg" alt="">
                 <div class="blocks-describ">
                     <p>Замена дверных ручек <br> и замков</p>
@@ -75,7 +80,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-xl-4">
-            <div class="blocks">
+            <div class="blocks faucet">
                 <img src="../assets/img/icons/item6.svg" alt="">
                 <div class="blocks-describ">
                     <p>Замена смесителей</p>
@@ -102,6 +107,16 @@
             </div>
         </div>
         </div>
+    <div class="row foryou-blocks master-one-hour">
+        <div class="col-12 col-md-12 col-xl-8">
+            <div class="blocks">
+            <img src="../assets/img/icons/item9.svg" alt="">
+            <div class="blocks-describ">
+             <p>Мастер на час</p>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
     </section>
 </template>
@@ -110,21 +125,54 @@
 
 
 export default {
+data(){
+    return{
+        top: 0,
+        top2:300
+    }
+},
+methods:{
+scroll(){
+    let distance = window.scrollY;
+    let table = this.$refs.table;
+    if(distance > 1165){
+        table.classList.add('active-table')
+    }
+}
+},
+computed:{
 
+},
+mounted(){
+window.addEventListener('scroll', this.scroll);
+}
 }
 </script>
 
 <style scoped>
+.active{
+    color:red;
+}
 #forYou{
 padding: 32px 0 240px 0;
 position: relative;
+overflow:visible;
 }
 .canbottom{
     position: absolute;
     right:0;
-    bottom: 0;
-    max-height: 291px;
-    width: 291px;
+    bottom:-210px;
+    height: auto;
+    max-width: 291px;
+    z-index: 2;
+    opacity: 0;
+    transition: all 1s ease 0s;
+    transform: translateX(10%);
+}
+.active-table{
+    opacity: 1;
+    transition: all 1s ease 0s;
+    transform: translateX(0%);
 }
 .service-bg{
     position: absolute;
@@ -132,6 +180,7 @@ position: relative;
     bottom: 80px;
     max-height: 784px;
     max-width: 375px;
+    z-index: -1;
 }
 .service-subtitle{
     margin:48px 0;
@@ -142,6 +191,8 @@ display: inline-block;
 h2{
     padding: 0 0 2px 0;
     border-bottom: 1px solid #80BD00;
+    font-size: 32px;
+    line-height: 37px;
 }
 .foryou-blocks{
     justify-content: flex-end;
@@ -177,20 +228,53 @@ h3{
 .service-subtitle:nth-child(2){
    margin:102px 0 0 0!important; 
 }
-@media (max-width: 1199px){
-.service-bg{
-    opacity: 0.1;
+.master{
+    display: none;
+    margin-top: 0 !important;;
 }
+@media (max-width: 1199px){
+    .service-bg{
+    opacity: 0.1;
+    }
+    .canbottom,.service-bg{
+    display: none;
+    }
+}
+@media (max-width: 992px){
+    .master{
+        display: flex;
+    }
+    .master-one-hour{
+        display: none;
+    }
+    .handle{
+        padding-top:32px;
+    }
 }
 @media (max-width:768px){
     #forYou{
-    padding: 32px 0 50px 0;
-}
-    .blocks{
-        margin:15px 0!important;
+    padding: 32px 0 64px 15px;
     }
-.service-subtitle:nth-child(2) {
+    .blocks{
+        margin:24px 0 0;
+    }
+    .repair{
+    margin:0;
+    }
+    .block-fr{
+    margin-top:24px;
+    }
+    .service-subtitle{
+    padding-left: 0;
+    }
+    .service-subtitle:nth-child(2) {
     margin: 40px 0 0 0!important;
-}
+    }
+    h2{
+    margin-bottom: 2px;
+    }
+    .handle{
+        padding-top:0;
+    }
 }
 </style>

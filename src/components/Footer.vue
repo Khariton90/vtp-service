@@ -1,5 +1,5 @@
 <template>
-    <footer id="contacts">
+    <footer class="section" id="contacts">
         <div class="container">
             <div class="row footer">
                 <div class="col-12 col-lg-8">
@@ -10,7 +10,10 @@
                         </div>
                         <div class="form-body">
                     <input type="text" placeholder="Как к вам обращаться?">
-                      <input type="tel" placeholder="Ваш номер телефона">
+                      <input type="tel" placeholder="Ваш номер телефона"
+                       v-imask="mask" ref="tel" 
+     @focus="mask.lazy = false"  @blur="mask.lazy = true"
+                      >
                       <button class="btn-vtp">Отправить</button>
                         </div>
                     </form>
@@ -19,9 +22,9 @@
                     <div class="contacts">
                         <span>Контакты</span>
                         <ul>
-                            <li> <a href=""> <span><img src="../assets/img/icons/tel_contacts.svg" alt=""></span> 8(905)252-99-99</a> </li>
-                            <li> <a href=""> <span><img src="../assets/img/icons/mail_contacts.svg" alt=""></span> vtpsinfo@mail.ru</a> </li>
-                            <li> <a href=""> <span><img src="../assets/img/icons/time_contacts.svg" alt=""></span> с 8.00 до 23.00</a> </li>
+                            <li> <a href="#"> <span><img src="../assets/img/icons/tel_contacts.svg" alt=""></span> 8(905)252-99-99</a> </li>
+                            <li> <a href="#"> <span><img src="../assets/img/icons/mail_contacts.svg" alt=""></span> vtpsinfo@mail.ru</a> </li>
+                            <li> <a href="#"> <span><img src="../assets/img/icons/time_contacts.svg" alt=""></span> с 8.00 до 23.00</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -31,9 +34,23 @@
 </template>
 
 <script>
-
+import {IMaskDirective} from 'vue-imask';
 export default{
+data(){
+    return{
+        value: 1,
+        mask: {
+          mask: '{+7} (000) 000-00-00',
+          lazy: true
+}
+}
+},
+methods:{
 
+ },
+  directives: {
+    imask: IMaskDirective
+  }
 }
 </script>
 

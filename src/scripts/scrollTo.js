@@ -3,13 +3,13 @@ export default function scrollTo(){
 
 	if (window.innerWidth > 992) {
 		document.querySelectorAll('.section').forEach((el, i) => {
-			if (el.offsetTop - document.querySelector('.navbar').clientHeight <= scrollDistance) {
-				document.querySelectorAll('.nav-link').forEach((el) => {
+			if ((el.offsetTop) - document.querySelector('.navbar').clientHeight <= scrollDistance) {
+				document.querySelectorAll('.link').forEach((el) => {
 					if (el.classList.contains('active')) {
 						el.classList.remove('active');
 					}
 				});
-				document.querySelectorAll('.nav-link')[i].classList.add('active');
+				document.querySelectorAll('.link')[i].classList.add('active');
 			}
 		});
 	}

@@ -89,8 +89,8 @@
       </div>
 
     </div>  
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next swiper-button-next-talk"></div>
+      <div class="swiper-button-prev swiper-button-prev-talk"></div>
         </div>
     </section>
 
@@ -98,11 +98,31 @@
 
 <script>
 export default{
+data(){
+return{
+}
+},
 mounted(){
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView:1.5,
+  window.addEventListener('load', function(){
+    var swiper
+    if(window.innerWidth > 600){
+      swiper = new Swiper(".mySwiper", {
+                slidesPerView:1.5,
         centeredSlides: true,
         spaceBetween: 78,
+        initialSlide: 1,
+        slidePerGroup:1,
+        loop:true,
+                navigation: {
+          nextEl: ".swiper-button-next-talk",
+          prevEl: ".swiper-button-prev-talk",
+        }
+      })
+    }else{
+      swiper = new Swiper(".mySwiper", {
+slidesPerView:1,
+        centeredSlides: true,
+        spaceBetween:5,
         initialSlide: 1,
         slidePerGroup:1,
         loop:true,
@@ -111,10 +131,12 @@ mounted(){
           type: "fraction",
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+          nextEl: ".swiper-button-next-talk",
+          prevEl: ".swiper-button-prev-talk",
+        }
+      })
+    } 
+})
 }
 }
 </script>
@@ -210,30 +232,37 @@ padding-bottom: 1px!important;
   .talk{
     max-width: 150px;
   }
+  .talk1{
+    bottom: 20px;
+  }
+  .talk2{
+    top: 20px;
+  }
 }
-@media (max-width:767px){
-  .swiper-item[data-v-9c9aaa48] {
-    width: 350px;
+@media (max-width:768px){
+.swiper-item{
+    max-width: 100%;
     height: auto;
+    width: 100%;
 }
 .talk{
-  max-width: 78px;
-  position: absolute;
+    max-width: 129px;
+    z-index: -1;
 }
 .talk1{
   left: 0;
-  bottom: 32px;
+  bottom: 0px;
 }
 .talk2{
   right: 0;
-  top: 32px;
+  top: 0px;
+}
+.talk-title h2{
+    margin-left: 15px;
+    margin-bottom: 45px;
 }
 }
 @media (max-width:500px){
-  .swiper-item[data-v-9c9aaa48] {
-    width: 250px;
-    height: auto;
-}
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
     right: 0;
     left: 130px;
@@ -245,9 +274,6 @@ padding-bottom: 1px!important;
     left: 0;
     bottom: -50px;
     margin: auto;
-}
-.talk-title h2{
-    margin-bottom: 40px;
 }
 }
 

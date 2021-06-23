@@ -1,13 +1,11 @@
 <template>
     <section id="organized">
-        <img class="organizedtop" src="../assets/img/organizedtop.png" alt="">
         <div class="container">
             <div class="row organized-title">
                 <h2>Как все устроено?</h2>
             </div>
                             <div class="organized-subtitle">
                     <p class="text-descript">Процесс начинается с выезда нашего<br> специалиста на объект и первичного осмотра.</p>
-                    <p class="text-descript">Далее работы разделяются на две категории.</p>
                 </div>
             <div class="row">
                 <div class="col-12 col-md-6">
@@ -90,6 +88,15 @@ export default{
 @media (max-width:992px){
     .text-descript br{
         display: block;
+    }
+    .list li:before {
+    width: 28px!important;
+    }
+    .list li{
+    padding: 8px 0 0 40px!important;
+    }
+    .list li:first-child{
+        padding: 0px 0 0 40px;
     }
 }
 </style>
