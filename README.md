@@ -21,8 +21,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Service
 Секция "Обслуживание и ремонт" (Главная)
+
 // ## Form 
 Форма на главной странице
+
 // Объект formData компонента Form -
 Данные после отправки формы
 
@@ -46,4 +48,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Footer
 Футер (Контакты)
+
 // Объект formFooter данные после отправки формы
