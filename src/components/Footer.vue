@@ -9,12 +9,15 @@
                         <span>и наш специалист вам перезонит</span>
                         </div>
                         <div class="form-body">
-                    <input type="text" placeholder="Как к вам обращаться?">
+                    <input type="text" placeholder="Как к вам обращаться?"
+                    v-model="name"
+                    >
                       <input type="tel" placeholder="Ваш номер телефона"
+                      v-model="telephone"
                        v-imask="mask" ref="tel" 
      @focus="mask.lazy = false"  @blur="mask.lazy = true"
                       >
-                      <button class="btn-vtp">Отправить</button>
+                      <button class="btn-vtp" @click.prevent="submitting">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -22,9 +25,9 @@
                     <div class="contacts">
                         <span>Контакты</span>
                         <ul>
-                            <li> <a href="#"> <span><img src="../assets/img/icons/tel_contacts.svg" alt=""></span> 8(905)252-99-99</a> </li>
-                            <li> <a href="#"> <span><img src="../assets/img/icons/mail_contacts.svg" alt=""></span> vtpsinfo@mail.ru</a> </li>
-                            <li> <a href="#"> <span><img src="../assets/img/icons/time_contacts.svg" alt=""></span> с 8.00 до 23.00</a> </li>
+                            <li> <a href="tel:89052529999"> <span><img src="../assets/img/icons/tel_contacts.svg" alt=""></span> 8(905)252-99-99</a> </li>
+                            <li> <a href="mailto:vtpsinfo@mail.ru"> <span><img src="../assets/img/icons/mail_contacts.svg" alt=""></span>vtpsinfo@mail.ru</a> </li>
+                            <li> <a href="#"> <span><img src="../assets/img/icons/time_contacts.svg" alt=""></span>с 8.00 до 23.00</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -42,12 +45,27 @@ data(){
         mask: {
           mask: '{+7} (000) 000-00-00',
           lazy: true
-}
+},
+name: '',
+telephone: '',
+formFooter: {}
 }
 },
-methods:{
-
- },
+methods: {
+submitting(){
+    if(this.name && this.telephone){
+        this.formFooter = {
+            name: this.name,
+            telephone: this.telephone
+        }
+        this.name = '',
+        this.telephone = ''
+    }else{
+        return false
+    }
+    return console.log(this.formFooter)
+}
+},
   directives: {
     imask: IMaskDirective
   }

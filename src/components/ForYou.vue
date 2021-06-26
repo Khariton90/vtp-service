@@ -16,7 +16,7 @@
         <div class="col-12 col-md-6 col-xl-4">
 
             <div class="blocks repair">
-                <img src="../assets/img/icons/item1.svg" alt="">
+                <img src="../assets/img/icons/item1.svg" alt="renovation of premises">
                 <div class="blocks-describ">
                     <p>Ремонт помещений</p>
                     <p>косметический и капитальный</p>
@@ -26,7 +26,7 @@
         </div>
         <div class="col-12 col-md-6 col-xl-4">
             <div class="blocks">
-                <img src="../assets/img/icons/item2.svg" alt="">
+                <img src="../assets/img/icons/item2.svg" alt="plumbing works">
                 <div class="blocks-describ">
                     <p>Сантехнические работы</p>
                     <p>выполнение полного цикла</p>
@@ -39,7 +39,7 @@
         <div class="col-12 col-md-6 col-xl-4">
 
             <div class="blocks">
-                <img src="../assets/img/icons/item3.svg" alt="">
+                <img src="../assets/img/icons/item3.svg" alt="electrical work">
                 <div class="blocks-describ">
                     <p>Электромонтажные работы</p>
                     <p>монтаж и подключение</p>
@@ -49,7 +49,7 @@
         </div>
         <div class="col-12 col-md-6 col-xl-4">
             <div class="blocks">
-                <img src="../assets/img/icons/item4.svg" alt="">
+                <img src="../assets/img/icons/item4.svg" alt="system maintenance">
                 <div class="blocks-describ">
                     <p>Обслуживание систем</p>
                     <p>кондиционирования, отопления и</p>
@@ -67,13 +67,13 @@
         <div class="row foryou-blocks block-fr">
         <div class="col-12 col-md-6 col-xl-4">
                         <div class="blocks master">
-            <img src="../assets/img/icons/item9.svg" alt="">
+            <img src="../assets/img/icons/item9.svg" alt="Master for an hour">
             <div class="blocks-describ">
              <p>Мастер на час</p>
             </div>
         </div>
             <div class="blocks handle">
-                <img src="../assets/img/icons/item5.svg" alt="">
+                <img src="../assets/img/icons/item5.svg" alt="Replacing handles">
                 <div class="blocks-describ">
                     <p>Замена дверных ручек <br> и замков</p>
                 </div>
@@ -81,7 +81,7 @@
         </div>
         <div class="col-12 col-md-6 col-xl-4">
             <div class="blocks faucet">
-                <img src="../assets/img/icons/item6.svg" alt="">
+                <img src="../assets/img/icons/item6.svg" alt="Replacement of mixers">
                 <div class="blocks-describ">
                     <p>Замена смесителей</p>
                 </div>
@@ -92,7 +92,7 @@
         <div class="col-12 col-md-6 col-xl-4">
 
             <div class="blocks">
-                <img src="../assets/img/icons/item7.svg" alt="">
+                <img src="../assets/img/icons/item7.svg" alt="Replacing lamps">
                 <div class="blocks-describ">
                     <p>Замена ламп,<br> электрических розеток</p>
                 </div>
@@ -100,7 +100,7 @@
         </div>
         <div class="col-12 col-md-6 col-xl-4">
             <div class="blocks">
-                <img src="../assets/img/icons/item8.svg" alt="">
+                <img src="../assets/img/icons/item8.svg" alt="Window repair">
                 <div class="blocks-describ">
                     <p>Ремонт окон</p>
                 </div>
@@ -110,7 +110,7 @@
     <div class="row foryou-blocks master-one-hour">
         <div class="col-12 col-md-12 col-xl-8">
             <div class="blocks">
-            <img src="../assets/img/icons/item9.svg" alt="">
+            <img src="../assets/img/icons/item9.svg" alt="Master for an hour">
             <div class="blocks-describ">
              <p>Мастер на час</p>
             </div>

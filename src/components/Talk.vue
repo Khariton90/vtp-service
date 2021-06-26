@@ -1,7 +1,7 @@
 <template>
     <section id="talk">
-      <img class="talk talk1" src="../assets/img/talk1.png" alt="">
-      <img class="talk talk2" src="../assets/img/talk2.png" alt="">
+      <img class="talk talk1" src="../assets/img/talk1.png" alt="quotation">
+      <img class="talk talk2" src="../assets/img/talk2.png" alt="quotation">
         <div class="container">
           <div class="row talk-title">
             <h2>Про нас говорят люди</h2>
@@ -14,7 +14,7 @@
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="№">читать отзыв</a></p>
             </div>
         </div>
         <div class="swiper-slide">
@@ -23,7 +23,7 @@
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="#">читать отзыв</a></p>
             </div>
         </div>
         <div class="swiper-slide">
@@ -32,7 +32,7 @@
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="#">читать отзыв</a></p>
             </div>
         </div>
         <div class="swiper-slide">
@@ -41,7 +41,7 @@
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="#">читать отзыв</a></p>
             </div>
         </div>
         <div class="swiper-slide">
@@ -50,7 +50,7 @@
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="#">читать отзыв</a></p>
             </div>
         </div>
         <div class="swiper-slide">
@@ -59,7 +59,7 @@
             <p>Нужен был ремонт в ресторане, обратились в эту компанию.</p>
             <p>Мастера начали свое дело буквально через несколько дней. </p>
             <p>Ребята были очень спокойными, хорошими.</p>
-            <p>Сделали очень качественный и красивый ремонт...  <a href="">далее</a></p>
+            <p>Сделали очень качественный и красивый ремонт...  <a href="#">читать отзыв</a></p>
             </div>
         </div>
       </div>
@@ -76,11 +76,26 @@
 export default{
 data(){
 return{
+
 }
 },
-mounted(){
-  window.addEventListener('load', function(){
-      var swiper = new Swiper(".mySwiper", {
+methods:{
+swipe(){
+if(window.innerWidth <= 768) {
+      let swiper = new Swiper(".mySwiper", {
+                slidesPerView:1,
+        centeredSlides: true,
+        spaceBetween: 0,
+        initialSlide: 1,
+        slidePerGroup:'auto',
+        loop:true,
+                navigation: {
+          nextEl: ".swiper-button-next-talk",
+          prevEl: ".swiper-button-prev-talk",
+        }
+      })
+}else{
+        let swiper = new Swiper(".mySwiper", {
                 slidesPerView:1.5,
         centeredSlides: true,
         spaceBetween: 20,
@@ -92,7 +107,12 @@ mounted(){
           prevEl: ".swiper-button-prev-talk",
         }
       })
-})
+}
+}
+},
+mounted(){
+  window.addEventListener( 'load', this.swipe)
+  window.addEventListener( 'resize', this.swipe)
 }
 }
 </script>
@@ -109,7 +129,8 @@ mounted(){
 .talk-title h2{
   padding: 0;
   border-bottom: 1px solid #80BD00;
-  margin-bottom:calc(45px + 40 * ((100vw - 375px) / (1440 - 375)));
+  margin-bottom:94px;
+  font-size: 32px;
 }
 .swiper-container {
         width: 100%;
@@ -129,7 +150,6 @@ background: #FFFFFF;
 border: 2px solid #80BD00;
 box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
 border-radius: 5px;
-color: #222222;
 font-style: italic;
 font-weight: normal;
 font-size: 12px;
@@ -138,6 +158,10 @@ padding: 18px 28px;
 display: flex;
 flex-direction: column;
 justify-content: center;
+color: #222222;
+}
+.swiper-slide-active a {
+  color: #0073C3;
 }
 .swiper-item p:first-child{
   font-weight: normal;
@@ -224,7 +248,7 @@ padding-bottom: 1px!important;
   top: 0px;
 }
 .talk-title h2{
-    margin-left: 15px;
+    margin-left: 0px;
     margin-bottom: 45px;
 }
 }
@@ -240,6 +264,11 @@ padding-bottom: 1px!important;
     left: 0;
     bottom: -50px;
     margin: auto;
+}
+}
+@media (max-width: 369px){
+  .talk-title h2{
+    font-size: 29px;
 }
 }
 

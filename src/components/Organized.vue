@@ -1,6 +1,6 @@
 <template>
     <section id="organized">
-      <img class="organized-bg" src="../assets/img/par2bg.png" alt="">
+      <img class="organized-bg" src="../assets/img/par2bg.png" alt="background">
         <div class="container">
             <div class="row organized-title">
                 <h2>Как все устроено?</h2>

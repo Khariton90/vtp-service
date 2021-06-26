@@ -81,8 +81,9 @@
   </thead>
 </table>
           </div>
+
           <div class="col accordeon-img">
-            <img src="../assets/img/price-image.png" alt="">
+            <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
                
@@ -165,7 +166,7 @@
 </table>
         </div>
         <div class="col accordeon-img">
-
+          <img src="../assets/img/price-image.png" alt="price-image">
         </div>
       </div>
 
@@ -247,7 +248,9 @@
   </thead>
 </table>
           </div>
-          <div class="col-6 accordeon-img"></div>
+          <div class="col accordeon-img">
+            <img src="../assets/img/price-image.png" alt="price-image">
+          </div>
         </div>
                
       </div>
@@ -329,7 +332,9 @@
   </thead>
 </table>
           </div>
-          <div class="col-6 accordeon-img"></div>
+          <div class="col accordeon-img">
+            <img src="../assets/img/price-image.png" alt="price-image">
+          </div>
         </div>
                
       </div>
@@ -411,7 +416,9 @@
   </thead>
 </table>
           </div>
-          <div class="col-6 accordeon-img"></div>
+          <div class="col accordeon-img">
+            <img src="../assets/img/price-image.png" alt="price-image">
+          </div>
         </div>
                
       </div>
@@ -493,7 +500,9 @@
   </thead>
 </table>
           </div>
-          <div class="col-6 accordeon-img"></div>
+          <div class="col accordeon-img">
+            <img src="../assets/img/price-image.png" alt="price-image">
+          </div>
         </div>
                
       </div>
@@ -605,7 +614,9 @@
   </thead>
 </table>
           </div>
-          <div class="col-6 accordeon-img"></div>
+          <div class="col accordeon-img">
+            <img src="../assets/img/price-image.png" alt="price-image">
+          </div>
         </div>
                
       </div>
@@ -727,7 +738,7 @@ width: 4px;
     border-top-right-radius: inherit;
 }
 .accordion-body{
-  max-height: 600px;
+  max-height: 700px;
   overflow-y: auto;
 }
 

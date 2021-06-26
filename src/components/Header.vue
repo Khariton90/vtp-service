@@ -24,8 +24,8 @@
   <div class="container-fluid wrapp">
 
     <div class="col">
-          <a class="navbar-brand d-flex" href="#">
-        <img src="../assets/img/icons/logo.svg" alt="">
+          <a class="navbar-brand d-flex" href="#" @click.prevent="" v-scroll-to="'#service'">
+        <img src="../assets/img/icons/logo.svg" alt="logo">
         <div class="navbar-brand__title d-flex flex-column justify-content-center">
         <span>ВТП-Сервис</span>
         <span class="nav-describ">Ремонт и обслуживание. Эффективно и быстро</span>
@@ -39,7 +39,7 @@
     </div>
   </div>
 <div class="col collapse navbar-collapse justify-content-center">
-    <div class=""  id="navbarSupportedContent">
+    <div id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a @click.prevent="" class="nav-link link"  v-scroll-to="'#service'">Услуги</a>
@@ -61,8 +61,8 @@
 </div>
 <div class="col-xl-3 col-xxl-2 col-lg-1">
       <div class="header-tel">
-          <a href="">
-              <span><img src="../assets/img/icons/tel_icon.svg" alt=""></span>
+          <a href="tel:89052529999">
+              <span><img src="../assets/img/icons/tel_icon.svg" alt="tel_icon"></span>
               <span>8 (905) 252-99-99</span>
               </a>
       </div>

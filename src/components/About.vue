@@ -30,12 +30,12 @@
           </div>
 <div class="row">
     <div class="col-4 sofa">
-        <img src="../assets/img/about1.png" alt="">
+        <img src="../assets/img/about1.png" alt="sofa">
     </div>
 </div>
       </div>
               <div class="about-bg" ref="bg">
-                  <img class="aboutframe" src="../assets/img/aboutframe.png" alt="">
+                  <img class="aboutframe" src="../assets/img/aboutframe.png" alt="frame">
                   <img src="../assets/img/about2.png" alt="">
               </div>
 </section>  

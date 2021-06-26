@@ -1,5 +1,5 @@
 <template>
-    <form action="" class="service-form p-0">
+    <form action="#" class="service-form p-0">
     <div class="form-header">
     <p>Оставте заявку</p>
     <p>и наш специалист вам перезонит</p>
@@ -7,28 +7,40 @@
     <div class="form-body">
     <div class="form-input">
     <label for="name">Как к вам обращаться?</label>
-    <input type="text" id="name" autocomplete="off">
+    <input type="text" id="name" autocomplete="off"
+    v-model.trim="name"
+    >
     </div>
     <div class="form-input">
     <label for="tel" >Ваш номер телефона</label>
     <input type="tel" id="tel" autocomplete="off"
-     v-imask="mask" ref="tel" 
-     @focus="mask.lazy = false"  @blur="mask.lazy = true">
+    v-model="telephone"
+     v-imask="mask" ref="tel"
+     @accept="onAccept"
+     @focus="mask.lazy = false" 
+     @blur="mask.lazy = true">
     </div>
     <div class="form-input form-input_select">
-    <label for="company">Выберите отдел              </label>
-    <select name="select" id="company">
-    <option value="value1">Значение 1</option>
-    <option value="value2" selected>Значение 2</option>
-    <option value="value3">Значение 3</option>
+    <label for="company">Выберите отдел</label>
+    <select name="select" id="company"
+    @change="changeCallStatus($event)"
+    :value="valueDepartment"
+    >
+    <option 
+    v-for="(department, index) in departments" :key="index"
+    >
+    {{ department }}
+    </option>
     </select>
     </div>
     <div class="form-input">
     <label for="message">Краткое описание работ</label>
-    <textarea type="text" id="message"> </textarea>
+    <textarea type="text" id="message"
+    v-model="description"
+    > </textarea>
     </div>
 
-    <button class="btn-vtp btn-form">Отправить</button>
+    <button class="btn-vtp btn-form" @click.prevent="submitting">Отправить</button>
     </div>
     </form>
 </template>
@@ -38,14 +50,45 @@ import {IMaskDirective} from 'vue-imask';
 export default{
 data(){
     return{
-        value: 1,
+        value: '',
         mask: {
           mask: '{+7} (000) 000-00-00',
           lazy: true
-}
+},
+    name: '',
+    telephone: this.value,
+    valueDepartment: '',
+    description: '',
+    departments: ['Значение1','Значение2','Значение3' ],
+    //!!!!!!!!Данные из формы после оправки!!!!!!!!!!!!//
+    formData: {}
 }
 },
 methods:{
+changeCallStatus(event){
+ this.valueDepartment = event.target.value
+},
+onAccept (e) {
+const maskRef = e.detail;
+this.value = maskRef.value;
+},
+submitting(){
+    if(this.name && this.telephone && this.valueDepartment && this.description){
+        this.formData = {
+        name: this.name,
+        telephone: this.telephone,
+        valueDepartment: this.valueDepartment,
+        description: this.description
+        }
+        this.name = ''
+        this.telephone = ''
+        this.description = ''
+        this.valueDepartment = ''
+    }else{
+        return false
+    }
+return console.log(this.formData)
+},
 
  },
   directives: {
