@@ -42,7 +42,7 @@ export default {
   },
   mounted(){
     AOS.init({
-
+      once: true,
     });
   }
 }
