@@ -41,9 +41,12 @@ export default {
     Footer,
   },
   mounted(){
-    AOS.init();
+    AOS.init({
+
+    });
   }
 }
+
 </script>
 
 <style>
