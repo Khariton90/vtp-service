@@ -681,9 +681,33 @@ export default{
     margin-bottom: 12px;
     width: auto;
 }
+.accordion-button {
+  position: relative;
+  background-color: #80BD00;
+  background-image: linear-gradient(45deg, rgba(255,255,255,.0) 40%, rgba(255,255,255,.5), rgba(255,255,255,.0) 60%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto;
+  background-position: 200% 0, 0 0;
+  box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+  padding: 6px 42px 7px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-bottom: 12px;
+  width: auto;
+  overflow: hidden;
+  animation: blik 3s linear infinite alternate-reverse;
+}
+@keyframes blik{
+  0%{
+    background-position: -200% 0, 0 0;
+  }
+  100%{
+    background-position: 200% 0, 0 0;
+  }
+}
 .accordion-item{
   border: none;
-  background-color: none;
 }
 .collapsed{
   margin: 0;
@@ -692,7 +716,6 @@ export default{
   margin-bottom: 20px;
 }
 ::-webkit-scrollbar-button {
-background-image:url('');
 background-repeat:no-repeat;
 width:5px;
 height:0px
@@ -713,7 +736,6 @@ background-color:#80BD00;
 }
 
 ::-webkit-resizer{
-background-image:url('');
 background-repeat:no-repeat;
 width:4px;
 height:0px
@@ -725,7 +747,6 @@ width: 4px;
 .accordion-button:not(.collapsed) {
     color: #FFFFFF;
     background-color: #80BD00;
-    box-shadow:0;
 }
 .accordion-button:focus {
     z-index: 3;
@@ -741,7 +762,10 @@ width: 4px;
   max-height: 700px;
   overflow-y: auto;
 }
-
+.accordion-button:not(.collapsed)::after {
+  background-image: url(" ");
+  transform: rotate(45deg);
+}
 @media (max-width:992px){
 .accordeon-img{
   display: none;

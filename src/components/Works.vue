@@ -5,7 +5,7 @@
             <h2>Наши работы</h2>
            </div>
             <div class="row work-row">
-                <div  class="col-12 col-lg-4 p-0 works-subtitle">
+                <div class="col-12 col-lg-4 p-0 works-subtitle">
                 <div class="counter" v-for="room in rooms" :key="room.id">
                   <h3 v-if="counter == room.id">{{ room.title }}</h3>
                   <ul v-if="counter == room.id">
@@ -18,6 +18,7 @@
                   </ul>
                 </div>
                 </div>
+
                 <div class="col">
 <div class="swiper-container newSwiper">
       <div class="swiper-wrapper">
@@ -125,14 +126,6 @@ mounted(){
 </script>
 
 <style scoped>
-.fade-enter-active,.fade-leave-active{
-	transition: opacity .2s linear;
-	opacity: 1;
-}
-.fade-leave-to,.fade-enter{
-	opacity: 0.3;
-	transition: opacity .2s linear;
-}
 .works-title{
 display: inline-block;
 }

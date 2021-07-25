@@ -23,7 +23,8 @@ import Organized from "@/components/Organized"
 import Works from "@/components/Works"
 import Talk from "@/components/Talk"
 import Footer from "@/components/Footer"
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 require('./assets/style.css')
 export default {
@@ -38,6 +39,9 @@ export default {
     Works,
     Talk,
     Footer,
+  },
+  mounted(){
+    AOS.init();
   }
 }
 </script>
