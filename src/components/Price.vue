@@ -694,7 +694,7 @@ export default{
   color: #FFFFFF;
   display: inline-block;
   margin-bottom: 12px;
-  width: auto;
+  width: 318px!important;
   overflow: hidden;
   animation: blik 3s linear infinite alternate-reverse;
 }
