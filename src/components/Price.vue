@@ -666,7 +666,7 @@ export default{
 .price-title{
     margin-bottom: 48px;
     display: inline-block;
-
+    margin-left: 15px;
 }
 .price-title h2{
   padding: 0;

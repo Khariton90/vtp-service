@@ -6,7 +6,7 @@
                     <form action="" class="form-footer">
                         <div class="form-title d-flex flex-column">
                         <span>Оставте заявку</span>
-                        <span>и наш специалист вам перезонит</span>
+                        <span>и наш специалист вам перезвонит</span>
                         </div>
                         <div class="form-body">
                     <input type="text" placeholder="Как к вам обращаться?"
@@ -123,7 +123,8 @@ input{
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 19px;  
+    line-height: 19px;
+  align-items: center;
 }
 .contacts img{
     max-width: 24px;
@@ -150,6 +151,9 @@ input{
 }
 .landing-done__row p{
   margin-right: 16px!important;
+}
+.contacts li:nth-child(3){
+  pointer-events: none;
 }
 @media (max-width: 1199px){
     .form-body {

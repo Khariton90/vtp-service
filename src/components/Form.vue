@@ -2,7 +2,7 @@
     <form action="#" class="service-form p-0">
     <div class="form-header">
     <p>Оставте заявку</p>
-    <p>и наш специалист вам перезонит</p>
+    <p>и наш специалист вам перезвонит</p>
     </div>
     <div class="form-body">
     <div class="form-input">
