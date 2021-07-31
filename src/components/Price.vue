@@ -86,7 +86,7 @@
             <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
-               
+
       </div>
     </div>
   </div>
@@ -252,7 +252,7 @@
             <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
-               
+
       </div>
     </div>
   </div>
@@ -336,7 +336,7 @@
             <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
-               
+
       </div>
     </div>
   </div>
@@ -420,7 +420,7 @@
             <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
-               
+
       </div>
     </div>
   </div>
@@ -504,7 +504,7 @@
             <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
-               
+
       </div>
     </div>
   </div>
@@ -618,7 +618,7 @@
             <img src="../assets/img/price-image.png" alt="price-image">
           </div>
         </div>
-               
+
       </div>
     </div>
   </div>
@@ -666,7 +666,7 @@ export default{
 .price-title{
     margin-bottom: 48px;
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 0px;
 }
 .price-title h2{
   padding: 0;
@@ -771,7 +771,7 @@ width: 4px;
   display: none;
 }
 .price-title h2{
-  margin-left: 15px;
+  margin-left: 0px;
 }
 .accordion-body {
     padding: 0 15px;
